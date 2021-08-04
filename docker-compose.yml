@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  react-app:
+    build: .
+    restart: always
+    command: tail -f /dev/null
+    volumes:
+      - .:/root/bus-train-status
+    environment:
+      - LC_ALL=C.UTF-8
+    ports:
+      - "3000:3000"
